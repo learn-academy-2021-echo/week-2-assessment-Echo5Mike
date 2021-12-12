@@ -33,23 +33,23 @@
 
 
 
-//-1) Create a function that takes a number as an argument and decides if the number is evenly divisble by three or not.
+//--------------1) Create a function that takes a number as an argument and decides if the number is evenly divisble by three or not.
 // a) Create a test with expect statements for each of the variables provided.
 
 // first we are going to get a jest test template
 // we are going to "update" the test with my requirements.
 // run test and let it fail
-// describe("isItDivisble", () => {
-//     var num1 = 15
-//     var num2 = 0
-//     var num3 = -7
+describe("isItDivisble", () => {
+    var num1 = 15
+    var num2 = 0
+    var num3 = -7
 
-//     it("takes in a number variable and returns a string if its divisible or not", () => {
-//       expect(isItDivisble(15)).toEqual("15 is divisible by three")
-//       expect(isItDivisble(0)).toEqual("0 is divisible by three")
-//       expect(isItDivisble(-7)).toEqual("-7 is not divisible by three")
-//     })
-// })
+    it("takes in a number variable and returns a string if its divisible or not", () => {
+      expect(isItDivisble(15)).toEqual("15 is divisible by three")
+      expect(isItDivisble(0)).toEqual("0 is divisible by three")
+      expect(isItDivisble(-7)).toEqual("-7 is not divisible by three")
+    })
+})
 //test fail marvelously.
 // start writing function that will take in a number vairble 
 // funtion will need a conditional      % !==0
@@ -63,10 +63,10 @@
 //     }
 // }
 // I made the test, I had a problem with having it passed then I realized that I was having the num%2 instead of num%3
-// const isItDivisble =(num) =>{
-//     return (num % 3 !== 0) ? `${num} is not divisible by three` : `${num} is divisible by three`
-// //this is my refactored code.  I had to use the trinary operator. I was trying to add a else statement, but couldn't figure out the syntax
-// }
+const isItDivisble =(num) =>{
+    return (num % 3 !== 0) ? `${num} is not divisible by three` : `${num} is divisible by three`
+//this is my refactored code.  I had to use the trinary operator. I was trying to add a else statement, but couldn't figure out the syntax
+}
 
 // var num1 = 15
 // Expected output: "15 is divisible by three"
@@ -88,15 +88,15 @@
 // I will copy a template of a jest test, modify the test to follow the desired outcome,let the test fail.
 // test must take in array and capitalize all THE FIRST letters and return array
 
-// describe("capFirstLetter", () => {
-//     var randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
-//     var randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
+describe("capFirstLetter", () => {
+    var randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
+    var randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
 
-//     it("takes in an array of strings and returns array of stings with first letter capitalized", () => {
-//       expect(capFirstLetter(["streetlamp", "potato", "teeth", "conclusion", "nephew"])).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
-//       expect(capFirstLetter(["temperature", "database", "chopsticks", "mango", "deduction"])).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
-//     })
-// })
+    it("takes in an array of strings and returns array of stings with first letter capitalized", () => {
+      expect(capFirstLetter(["streetlamp", "potato", "teeth", "conclusion", "nephew"])).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
+      expect(capFirstLetter(["temperature", "database", "chopsticks", "mango", "deduction"])).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
+    })
+})
 //function must take in an array, 
 // I must split or join array to get it in string to capitalize it.
 //maybe a .map will work
@@ -107,14 +107,14 @@
 // // Expected output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
 
 
-// const capFirstLetter = (array)=>{
-//     let capLetterArray = array.map(value =>{
-//         return value[0].toUpperCase() + value.substring(1)
-//         // return value[1].toUpperCase() + value.substring(1)
-//         // I was thinking of a way to map over the array.  I had to use the syllabus to help me out with this one. I was thinking that value would count through the whole array, but it actually starts at every index.
-//     })
-//     return capLetterArray
-// }
+const capFirstLetter = (array)=>{
+    let capLetterArray = array.map(value =>{
+        return value[0].toUpperCase() + value.substring(1)
+        // return value[1].toUpperCase() + value.substring(1)
+        // I was thinking of a way to map over the array.  I had to use the syllabus to help me out with this one. I was thinking that value would count through the whole array, but it actually starts at every index.
+    })
+    return capLetterArray
+}
 
 // console.log(capFirstLetter(randomNouns1))
 
@@ -158,9 +158,9 @@ describe("vowelFinder", () => {
       expect(vowelFinder("challenges")).toEqual(2)
     })
 })
-//i'm thinking that a for loop might work here or maybe just the .forEach
-//a for loop will work on strings, .forEach is for an Array.
-//
+// //i'm thinking that a for loop might work here or maybe just the .forEach
+// //a for loop will work on strings, .forEach is for an Array.
+// //
 const vowelFinder =(string)=>{
 let stringToArray = string.split("")
 //need to make a string to array
@@ -168,19 +168,18 @@ let empty =[]
     stringToArray.forEach((value, index) => {
         // I couldn't get the for loop to work so I indeed up with .foreach
         if (value === "a" || value ==="e"|| value ==="i"|| value ==="o"|| value ==="u"){
-            //
             // console.log(index);
             return empty.push(index)
         }
         // console.log(value);
         return //keep getting undefined
     });
+    return empty[0]// with my .foreach I kept getting all the vowels, push all the vowels into array and call on [0] 
 
-return empty[0]// with my .foreach I kept getting all the vowels, push all the vowels into array and call on [0] 
-
-var vowelTester1 = "learn"
-// Expected output: 1
-var vowelTester2 = "academy"
-// Expected output: 0
-var vowelTester3 = "challenges"
-// Expected output: 2
+}
+// var vowelTester1 = "learn"
+// // Expected output: 1
+// var vowelTester2 = "academy"
+// // Expected output: 0
+// var vowelTester3 = "challenges"
+// // Expected output: 2
