@@ -8,23 +8,23 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 1. What is the difference between a parameter and an argument?
 
-  Your answer:
+  Your answer: A papameter is an empty place holder for an argument to be passed into.
 
-  Researched answer:
+  Researched answer: A papameter is an empty place holder for an argument to be passed into.  The argument is what realy holds the value.
 
 
 
 2. The JavaScript built in method .map() takes predefined parameters. What are they? Which are required and which are optional?
 
-  Your answer:
+  Your answer: .map() is a HOF that will iterate over an array simiular to forloop.  It will iterate only over an array. It takes in the papmeters of value, index and array, with value being mandatory.
 
-  Researched answer:
+  Researched answer:.map() is a HOF that will iterate over an array simiular to forloop.  It will iterate only over an array. It takes in the papmeters of value, index and array, with value being mandatory. It will then return an array with whatever arguments that got passed.
 
 
 
 3. What is object destructuring?
 
-  Your answer:
+  Your answer: It is a short hand way to call back key and values from an object by giving 
 
   Researched answer:
 
